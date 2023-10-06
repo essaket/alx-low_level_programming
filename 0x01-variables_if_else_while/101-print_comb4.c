@@ -12,7 +12,7 @@ int main(void)
 {
 	int x, y, z;
 
-	for (x = 48; x <= 57; n++)
+	for (x = 48; x <= 57; x++)
 	{
 		for (y = 49; y <= 57; y++)
 		{
@@ -20,9 +20,9 @@ int main(void)
 			{
 				if (x < y && y < z)
 				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
+					putchar(x);
+					putchar(y);
+					putchar(z);
 					if (x != 55 || y != 56)
 					{
 						putchar(',');
