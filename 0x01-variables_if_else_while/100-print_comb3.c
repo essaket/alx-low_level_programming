@@ -10,11 +10,11 @@
 
 int main(void)
 {
-	int x = 48, m = 49;
+	int x = 48, y = 49;
 
-	for (; n <= 56 ;)
+	for (; x <= 56 ;)
 	{
-		for (; m <= 57 ;)
+		for (; y <= 57 ;)
 		{
 			putchar(x);
 			putchar(y);
