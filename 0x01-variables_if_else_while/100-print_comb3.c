@@ -12,9 +12,9 @@ int main(void)
 {
 	int x = 48, y = 49;
 
-	for (; x <= 56 ;)
+	for (x ; x <= 56 ; x++)
 	{
-		for (; y <= 57 ;)
+		for (y ; y <= 57 ; y++)
 		{
 			putchar(x);
 			putchar(y);
