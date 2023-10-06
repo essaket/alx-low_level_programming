@@ -7,13 +7,18 @@
  */
 int main(void)
 {
-char alp[52] = "abcdfghijklmnoprstuvwxyz";
-	int i;
+	char ch = 'a';
 
-	for (i = 0; i < 52; i++)
+	while (ch <= 'z')
 	{
-		putchar(alp[i]);
+		if (ch == 'e' || ch == 'q')
+		{
+			ch++;
+		}
+		putchar(ch);
+		ch++;
 	}
 	putchar('\n');
+
 	return (0);
 }
