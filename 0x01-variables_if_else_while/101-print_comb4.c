@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	int x, y, z;
+	int x = 48, y = 49, z = 50;
 
-	for (x = 48; x <= 57; x++)
+	while (x <= 57)
 	{
-		for (y = 49; y <= 57; y++)
+		while (y <= 57)
 		{
-			for (z = 50; z <= 57; z++)
+			while (z <= 57)
 			{
 				if (x < y && y < z)
 				{
@@ -29,8 +29,11 @@ int main(void)
 						putchar(' ');
 					}
 				}
+				z++;
 			}
+			y++:
 		}
+		x++;
 	}
 	putchar('\n');
 	return (0);
