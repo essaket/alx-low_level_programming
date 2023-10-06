@@ -19,7 +19,7 @@ int main(void)
 			if ( x != y && x < y)
 			{
 				putchar(x);
-				putchar(y)
+				putchar(y);
 			}
 			if (x != 56 && y != 57)
 			{
