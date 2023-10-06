@@ -12,14 +12,19 @@ int main(void)
 {
 	int x = 48, y = 49;
 
-	for (x ; x <= 56 ; x++)
+	for ( ; x <= 56 ; )
 	{
-		for (y ; y <= 57 ; y++)
+		for ( ; y <= 57 ; )
 		{
-			putchar(x);
-			putchar(y);
-			putchar(',');
-			putchar(' ');
+			if ( x != y && x < y)
+			{
+				putchar(x);
+				putchar(y)
+			}
+			if (x != 56 && y != 57)
+			{
+				putchar(',');
+				putchar(' ');
 		}
 	}
 	putchar('\n');
