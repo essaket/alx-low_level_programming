@@ -10,12 +10,11 @@
 
 int main(void)
 {
-	int x = 48, y = 49;
+	int x, y;
 
-	for ( ; x <= 56 ; )
+	for (x = 48 ; x <= 56 ; x++ )
 	{
-		for ( ; y <= 57 ; )
-		{
+		for (y = 49 ; y <= 57 ; y++)
 			if ( x != y && x < y)
 			{
 				putchar(x);
