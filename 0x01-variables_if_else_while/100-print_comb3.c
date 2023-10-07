@@ -21,14 +21,13 @@ int main(void)
 			{
 				putchar(x + 48);
 				putchar(y + 48);
-
 				if (x + y != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			y++,
+			y++;
 		}
 		x++;
 	}
