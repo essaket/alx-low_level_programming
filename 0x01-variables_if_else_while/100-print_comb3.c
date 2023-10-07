@@ -10,27 +10,29 @@
 
 int main(void)
 {
-        int x = 48;
-        int y = 49;
+	int x = 0, y;
 
-        while (x <= 56)
-        {
-                while (y <= 57)
-                {
-                        if (y > x)
-                        {
-                                putchar(x);
-                                putchar(y);
-                                if (x != 56 || y != 57)
-                                {
-                                        putchar(',');
-                                        putchar(' ');
-                                }
-                        }
-                        y++;
-                }
-                x++;
-        }
-        putchar('\n');
-        return (0);
+	while (x <= 9)
+	{
+		y = 0;
+		while (y <= 9)
+		{
+			if (x != y && x < y)
+			{
+				putchar(x + 48);
+				putchar(y + 48);
+
+				if (x + y != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			y++,
+		}
+		x++;
+	}
+	putchar('\n');
+
+	return (0);
 }
