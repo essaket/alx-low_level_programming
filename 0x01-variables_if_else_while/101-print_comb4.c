@@ -5,29 +5,33 @@
  *
  *  Description: prints all possible different combinations of two digits
  *
- *  Return: ALways 0 for Success
+ *  Return: Always 0 for Success
  */
 
 int main(void)
 {
-	int x = 48, y = 49, z = 50;
+	int x = 0;
+	int y, z;
 
-	while (x <= 57)
+	while (x <= 9)
 	{
-		while (y <= 57)
+		y = 0;
+		while (y <= 9)
 		{
-			while (z <= 57)
+			z = 0;
+			while (z <= 9)
 			{
-				if (x < y && y < z)
+				if (x != y && x < y && y != z && y < z)
 				{
-					putchar(x);
-					putchar(y);
-					putchar(z);
-					if (x != 55 || y != 56)
+					putchar(x + 48);
+					putchar(y + 48);
+					putchar(z + 48);
+
+					if (x + y + z != 24)
 					{
 						putchar(',');
 						putchar(' ');
-					}
+					{
 				}
 				z++;
 			}
@@ -36,5 +40,6 @@ int main(void)
 		x++;
 	}
 	putchar('\n');
+
 	return (0);
 }
