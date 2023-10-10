@@ -12,8 +12,7 @@
 int main(void)
 {
 	int i;
-	long x1 = 0, x2 = 1, sum = 0;
-	float tsum;
+	long x1 = 1, x2 = 2, sum = 0, tsum;
 
 	while (x1 + x2 > 4000000)
 	{
