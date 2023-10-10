@@ -10,18 +10,15 @@
 
 int main(void)
 {
-	int x, div3, div5;
-	short sum3, sum5;
+	int x;
+	short sum;
 
-	div3 = 1024 / 3;
-	div5 = 1024 / 5;
-	sum3 = 0;
-	sum5 = 0;
-	for (x = 0; x < div3; x++)
-		sum3 += x * 3;
-	for (x = 0; x < div5; x++)
-		sum5 += x * 5;
-	printf("%hd\n", sum3 + sum5);
+	for (x = 0; x < 1024; x++)
+	{
+		if ((x % 3) == 0 || (x % 5) == 0)
+			sum += x;
+	}
+	printf("%hd\n", sum);
 
 	return (0);
 }
