@@ -20,10 +20,7 @@ void print_to_98(int n)
 	else
 		for (z = n; z > 98; z--)
 		{
-			printf("%d", z);
-			_putchar('.');
-			_putchar(' ');
+			printf("%d. ", z);
 		}
-	_putchar(98 + '0');
-	_putchar('\n');
+	printf("98\n");
 }
