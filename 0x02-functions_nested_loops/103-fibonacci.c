@@ -11,10 +11,11 @@
 
 int main(void)
 {
-	unsigned long x1 = 0, x2 = 1, sum = 0;
+	int i;
+	long x1 = 0, x2 = 1, sum = 0;
 	float tsum;
 
-	while (sum > 4000000)
+	while (x1 + x2 > 4000000)
 	{
 		sum = x1 + x2;
 
@@ -22,6 +23,7 @@ int main(void)
 			tsum += sum;
 		x1 = x2;
 		x2 = sum;
+		i++;
 	}
 	printf("%.0f\n", tsum);
 
