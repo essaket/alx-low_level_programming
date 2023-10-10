@@ -31,8 +31,9 @@ void print_times_table(int n)
 					_putchar((j / 100) + '0');
 					_putchar((j / 10) % 10 + '0');
 				}
-				else 
-				{	if (j <= 99 && j >= 10)
+				else
+				{
+					if (j <= 99 && j >= 10)
 						_putchar((j / 10) + 48);
 				}
 				_putchar((j % 10) + '0');
