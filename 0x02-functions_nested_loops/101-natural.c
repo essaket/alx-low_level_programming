@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	int x, div3, div5, sum3, sum5;
+	int x, div3, div5;
+	short sum3, sum5;
 
 	div3 = 1024 / 3;
 	div5 = 1024 / 5;
