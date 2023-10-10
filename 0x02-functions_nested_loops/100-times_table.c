@@ -21,6 +21,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' '):
 				j = x * y;
 				if (j <= n)
 					_putchar(' ');
