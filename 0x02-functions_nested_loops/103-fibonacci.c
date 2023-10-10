@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	long x1 = 1, x2 = 2, sum = 0, tsum;
+	long x1 = 0, x2 = 1, sum, tsum;
 
 	while (1)
 	{
