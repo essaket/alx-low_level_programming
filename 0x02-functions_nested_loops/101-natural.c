@@ -20,7 +20,7 @@ int main(void)
 		sum3 += x * 3;
 	for (x = 0; x < div5; x++)
 		sum5 += x * 5;
-	printf("%d", sum3 + sum5);
+	printf("%d\n", sum3 + sum5);
 
 	return (0);
 }
