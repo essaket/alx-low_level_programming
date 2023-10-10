@@ -13,6 +13,7 @@ int main(void)
 {
 	unsigned long x1 = 0, x2 = 1, sum;
 	float tsum;
+
 	while (1)
 	{
 		sum = x1 + x2;
