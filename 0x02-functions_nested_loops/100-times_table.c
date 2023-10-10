@@ -21,12 +21,20 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
 				j = x * y;
-				if (j <= n)
+				if (j <= 9)
 					_putchar(' ');
-				else
-					_putchar((j / 10) + 48);
+				if (j <= 99)
+					_putchar(' ');
+				if (j > 99)
+				{
+					_putchar((j / 100) + '0');
+					_putchar((j / 10) % 10 + '0');
+				}
+				else 
+				{	if (j <= 99 && j >= 10)
+						_putchar((j / 10) + 48);
+				}
 				_putchar((j % 10) + '0');
 			}
 			_putchar('\n');
