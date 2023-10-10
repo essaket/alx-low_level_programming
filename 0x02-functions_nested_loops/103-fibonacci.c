@@ -11,18 +11,19 @@
 
 int main(void)
 {
-	int i;
 	long x1 = 1, x2 = 2, sum = 0, tsum;
 
-	while (x1 + x2 > 4000000)
+	while (1)
 	{
 		sum = x1 + x2;
+
+		if (sum > 4000000)
+			break;
 
 		if ((sum % 2) == 0)
 			tsum += sum;
 		x1 = x2;
 		x2 = sum;
-		i++;
 	}
 	printf("%ld\n", tsum);
 
