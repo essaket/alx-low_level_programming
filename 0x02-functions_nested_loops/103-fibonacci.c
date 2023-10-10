@@ -24,7 +24,7 @@ int main(void)
 		x2 = sum;
 		i++;
 	}
-	printf("%.0f\n", tsum);
+	printf("%ld\n", tsum);
 
 	return (0);
 }
