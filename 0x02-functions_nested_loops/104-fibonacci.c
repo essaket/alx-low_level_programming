@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main -Entry point
+ * main - Entry point
  *
- * Description: program that finds and prints the first 98 Fibonacci numbers, 
+ * Description: program that finds and prints the first 98 Fibonacci numbers,
  *		starting with 1 and 2.
  * Return: Always 0
  */
@@ -11,9 +11,8 @@
 int main(void)
 {
 	unsigned long int i, x = 1, y = 2, l = 1000000000, x1, x2, y1, y2;
-	
-	printf("%lu", x);
 
+	printf("%lu", x);
 	for (i = 1; i < 91; i++)
 	{
 		printf(", %lu", y);
