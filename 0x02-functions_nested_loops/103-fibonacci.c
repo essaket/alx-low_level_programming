@@ -11,8 +11,8 @@
 
 int main(void)
 {
-	long x1 = 0, x2 = 1, sum, tsum;
-
+	unsigned long x1 = 0, x2 = 1, sum;
+	float tsum;
 	while (1)
 	{
 		sum = x1 + x2;
@@ -25,7 +25,7 @@ int main(void)
 		x1 = x2;
 		x2 = sum;
 	}
-	printf("%ld\n", tsum);
+	printf("%.0f\n", tsum);
 
 	return (0);
 }
