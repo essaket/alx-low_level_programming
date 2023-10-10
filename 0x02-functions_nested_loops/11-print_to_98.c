@@ -15,14 +15,14 @@ void print_to_98(int n)
 	if (n < 98)
 		for (z = n; z < 98; z++)
 		{
-			_putchar(z + '0');
+			_putchar('z' + '0');
 			_putchar('.');
 			_putchar(' ');
 		}
 	else
 		for (z = n; z > 98; z--)
 		{
-			_putchar(z + '0');
+			_putchar('z' + '0');
 			_putchar('.');
 			_putchar(' ');
 		}
