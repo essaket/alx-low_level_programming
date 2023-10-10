@@ -3,9 +3,10 @@
 /**
  * main - Entry point
  *
- * description: prints the first 50 Fibonacci
+ * Description: prints the first 50 Fibonacci
+ *		starting with 1 and 2
  *
- * return: always 0
+ * Return: always 0
  */
 
 int main(void)
