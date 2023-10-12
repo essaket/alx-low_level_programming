@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - Entry point
@@ -26,7 +25,7 @@ int main(void)
 		if (x < 100)
 			printf(" ");
 	}
-	_putchar('\n');
+	printf("\n");
 
 	return (0);
 }
