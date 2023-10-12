@@ -4,14 +4,13 @@
 /**
  * main - Entry point
  *
- * @n: checks input of function
- *
  * Return: 0 for success
  */
 
-int main(long int n)
+int main(void)
 {
-	long int x, y, z;
+	long int x, z;
+	long int n = 612852475143;
 
 	while (n % 2 == 0)
 	{
