@@ -13,7 +13,7 @@ void more_numbers(void)
 
 	for (x = 0; x <= 9; x++)
 	{
-		for (y = 0; y < 14; y++)
+		for (y = 0; y <= 14; y++)
 		{
 			if (i > 9)
 				_putchar(1);
