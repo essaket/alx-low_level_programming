@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * function that convert a string to an integer
+ * _atoi - function that convert a string to an integer
  *
  * @s: input of function
  *
@@ -24,4 +24,4 @@ int _atoi(char *s)
 	} while (*s++);
 
 	return (n * x);
-}	
+}
