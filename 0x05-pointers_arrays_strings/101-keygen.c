@@ -20,9 +20,9 @@ int main(void)
 	{
 		c = rand() % 128;
 		x += c;
-		printf("%c", c); /* or putchar(c);*/
+		putchar(c);
 	}
-	printf("%d", 2772 - x);
+	putchar(2772 - x);
 
 	return (0);
 }
