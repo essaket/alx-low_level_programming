@@ -11,12 +11,9 @@
 
 void _puts(char *str)
 {
-	int i, x;
-	int *ptr;
+	int i;
 
 	for (i = 0; i < strlen(str); i++)
-	{
-		ptr = &i;
-		_putchar(ptr + 48);
-	}
+		_putchar(*str + 48);
+	_putchar('\n');
 }
