@@ -12,13 +12,11 @@
 
 void puts2(char *str)
 {
-	int i;
-	int x = strlen(str);
-	char j[x / 2];
+	int i, x;
 
-	for (i = 0; i < x ; i++)
-	{
-		j[i / 2] = str[i];
-		i++;
-	}
+	x = strlen(str);
+
+	for (i = 0; i < x ;i += 2)
+		_putchar(str[i]);
+	_putchar('\n');
 }
