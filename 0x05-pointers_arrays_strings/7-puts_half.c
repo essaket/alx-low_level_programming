@@ -17,15 +17,14 @@ void puts_half(char *str)
 	x = strlen(str);
 
 	if (x % 2 == 0)
-	{
-		for (i = x / 2; i < x; i++)
-		_putchar(str[i]);
-	_putchar('\n');
-	}
+		i = x / 2;
 	else
 	{
-		for (i = x / 2; i <= x; i++)
-			_putchar(str[i]);
-		_putchar('\n');
+		i = (x - 1) / 2;
+		i++;
 	}
+
+	for (i ; i < x; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
