@@ -12,10 +12,9 @@
 
 void puts2(char *str)
 {
-	int i, x;
-	char j[];
-
-	x = strlen(str);
+	int i;
+	int x = strlen(str);
+	char j[x / 2];
 
 	for (i = 0; i < x ; i++)
 	{
