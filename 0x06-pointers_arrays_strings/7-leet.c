@@ -19,7 +19,7 @@ char *leet(char *x)
 		for (; j < 10; j++)
 		{
 			if (x[i] == c1[j])
-				x[i] = c2[j]
+				x[i] = c2[j];
 		}
 	}
 
