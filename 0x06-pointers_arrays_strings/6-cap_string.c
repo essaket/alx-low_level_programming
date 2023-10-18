@@ -14,7 +14,7 @@ char *cap_string(char *x)
 
 	while (x[i])
 	{
-		while (!(x[i] > 96 && x[i] < 123))
+		while (!(x[i] >= 'a' && x[i] <= 'z'))
 			i++;
 
 		if (x[i- 1] == ' ' ||
