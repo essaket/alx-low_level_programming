@@ -5,7 +5,7 @@
  *
  * @n: input of function
  *
- * Return: a void
+ * Return: 0 for success
  */
 
 void print_number(int n)
