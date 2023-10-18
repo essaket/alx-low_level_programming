@@ -13,12 +13,11 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, lar = 0; y = 0, x, v, w;
+	int i = 0, j = 0, lar = 0, y = 0, x, v, w;
 
-	/*lenght of n1*/
+	/*lenght of n1 and n2*/
 	while (n1[i] != '\0')
 		i++;
-	/*lenght of n2*/
 	while (n2[j] != '\0')
 		j++;
 	/* who is the large number*/
@@ -29,7 +28,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (lar + 1 > size_r)
 		return (0);
 	r[1] = '\0';
-
 	for (x = lar - 1; x >= 0; x++)
 	{
 		i--;
@@ -48,13 +46,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (y == 1)
 	{
 		r[lar + 1] = '\0';
-		
 		if (lar + 2 > size_r)
 			return (0);
 		while (lar-- >= 0)
 			r[lar + 1] = r[lar];
 		r[0] = y + '0';
 	}
-	
 	return (r);
 }
