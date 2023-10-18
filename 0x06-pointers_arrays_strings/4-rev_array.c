@@ -20,7 +20,7 @@ void reverse_array(int *a, int n)
 	for (x = 0; x < n - 1; x++)
 	{
 		c = a[x];
-		a[x -1] = a[y - x - 1];
-		a[y - x - 1] = c;
+		a[x] = a[y - x];
+		a[y - x] = c;
 	}
 }
