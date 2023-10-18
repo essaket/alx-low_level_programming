@@ -21,6 +21,7 @@ char *rot13(char *x)
 			if (x[i] == c1[j])
 			{
 				x[i] = c2[j];
+				break;
 			}
 		}
 	}
