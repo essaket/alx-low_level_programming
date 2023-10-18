@@ -14,9 +14,9 @@ char *leet(char *x)
 	char c1[] = "AaEaOoTtLl";
 	char c2[] = "4433007711";
 
-	for ( ; x[i] != '\0'; x++)
+	for (; x[i] != '\0'; i++)
 	{
-		for ( ; j < 10; j++)
+		for (; j < 10; j++)
 		{
 			if (x[i] == c1[j])
 				x[i] = c2[j]
