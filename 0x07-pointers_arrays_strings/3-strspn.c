@@ -13,13 +13,15 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i, x;
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = 0;
+	while(s)
 	{
 		for (x = 0; accept[x] != s[i]; x++)
 		{
 			if (accept[x] == '\0')
 				return (i);
 		}
+		i++;
 	}
 
 	return (i);
