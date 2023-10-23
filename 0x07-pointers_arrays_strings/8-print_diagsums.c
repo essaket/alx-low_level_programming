@@ -2,7 +2,7 @@
 
 /**
  * print_diagsums - function that prints the sum of the two diagonals
- * 			of a square matrix of integers
+ *			of a square matrix of integers
  *
  * @a: an array
  * @size: input of function
