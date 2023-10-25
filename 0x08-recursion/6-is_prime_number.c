@@ -29,7 +29,7 @@ int check_is_prime_number(int n, int x)
 		return (0);
 
 	if (n % x == 0 && x > 1)
-		retutn (0);
+		return (0);
 
 	if((n / x) < x)
 		return (1);
