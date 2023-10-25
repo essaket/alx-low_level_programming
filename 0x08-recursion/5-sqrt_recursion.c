@@ -31,7 +31,7 @@ int calcul_sqrt_recursion(int n, int x)
 		return (x);
 
 	else if (x * x < n)
-		return (calcuö_sqr_recirsion(n, x + 1));
+		return (calcul_sqr_recirsion(n, x + 1));
 
 	else
 		return (-1);
