@@ -10,13 +10,14 @@
 
 int _sqrt_recursion(int n)
 {
-	int x = 0;
+	int i = 0;
 
-	if (n % n != 0)
-		return (-1);
+	if (i * i == n)
+		return (i);
 
-	else
-		x = n / n;
-
-	return (x);
+	else if (i * i < n)
+	{
+		i++;
+		return _sqrt_recursion(n);
+	}
 }
