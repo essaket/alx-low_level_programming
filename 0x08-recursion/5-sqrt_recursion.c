@@ -20,4 +20,6 @@ int _sqrt_recursion(int n)
 		i++;
 		return (_sqrt_recursion(n));
 	}
+
+	return (i);
 }
