@@ -12,10 +12,7 @@ int check_is_prime_number(int n, int x);
 
 int is_prime_number(int n)
 {
-	if (n <= 0)
-		return (0);
-
-	return (check_is_prime_number(n, n - 1));
+	return (check_is_prime_number(n, 1));
 }
 
 /**
@@ -28,9 +25,14 @@ int is_prime_number(int n)
  */
 int check_is_prime_number(int n, int x)
 {
-	if (n % x == 0 || x > 1)
+	if (n <= 1)
 		return (0);
-	if (x == 1)
+
+	if (n % x == 0 && x > 1)
+		retutn (0);
+
+	if((n / x) < x)
 		return (1);
-	return (check_is_prime_number(n, x - 1));
+
+	return (check_is_prime_number(n, x + 1));
 }
