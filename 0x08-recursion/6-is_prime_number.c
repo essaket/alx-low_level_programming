@@ -31,7 +31,7 @@ int check_is_prime_number(int n, int x)
 	if (n % x == 0 && x > 1)
 		return (0);
 
-	if((n / x) < x)
+	if ((n / x) < x)
 		return (1);
 
 	return (check_is_prime_number(n, x + 1));
