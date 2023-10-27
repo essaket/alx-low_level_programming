@@ -12,34 +12,22 @@
 
 int main(int argc, char *argv[])
 {
-	int z, i;
-	unsigned int x, len;
-	char *y;
+	int x = 0;
+	char *p;
 
-	x = 0;
-	if (argc > 1)
+	while (--argc)
 	{
-		for (i = 1; i < argc; i++)
+		for (p = argv[argc]; *p; p++)
 		{
-			y = argv[i];
-
-			for (z = 0; z < strlen[y]; z++)
+			if (*p < 48 || *p > '9')
 			{
-				if (y[z] < '0' || y[z] > '9')
-				{
-					printf("Error\n");
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
-
-			x += atoi(y);
-			y++;
+			x += atoi(argv[argc]);
 		}
-
-		printf("%d\n", x);
 	}
-	else
-		printf("0\n");
+	printf("%d\n", x);
 
 	return (0);
 }
