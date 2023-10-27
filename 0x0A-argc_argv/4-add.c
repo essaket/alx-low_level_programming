@@ -20,12 +20,8 @@ int main(int argc, char *argv[])
 		for (p = argv[argc]; *p; p++)
 		{
 			if (*p < 48 || *p > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
+				return (printf("Error\n"), 1);				
 			x += atoi(argv[argc]);
-		}
 	}
 	printf("%d\n", x);
 
