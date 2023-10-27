@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - program that adds positive numbers
@@ -22,10 +23,7 @@ int main(int argc, char *argv[])
 		{
 			y = argv[i];
 
-			while (*y)
-				len++;
-
-			for (z = 0; z < len; z++)
+			for (z = 0; z < strlen[y]; z++)
 			{
 				if (y[z] < '0' || y[z] > '9')
 				{
