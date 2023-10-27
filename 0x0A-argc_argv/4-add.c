@@ -11,23 +11,36 @@
 
 int main(int argc, char *argv[])
 {
-	int x, i;
+	int z, i;
+	unsigned int x, len;
+	char *y;
 
 	if (argc > 1)
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			if (*(argv[i]) < '0' || *(argv[i]) > '9')
+			y = argv[i];
+
+			while (*y)
+				len++;
+
+			for (z = 0; z < len; z++)
 			{
-				printf("Error\n");
-				return (1);
+				if (y[z] < '0' || y[z] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			x += atoi(argv[i]);
+
+			x += atoi(y);
+			y++;
 		}
+
+		printf("%d\n", x);
 	}
 	else
 		printf("0\n");
-	printf("%d\n", x);
 
 	return (0);
 }
