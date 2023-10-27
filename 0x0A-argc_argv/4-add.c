@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		for(i = 0, i < argc, i++)
+		for(i = 0; i < argc; i++)
 		{
-			if (*argv < '0' || *argv > '9')
+			if (*(argv[i]) < '0' || *(argv[i]) > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			X += atoi(arg[i]);
+			x += atoi(argv[i]);
 		}
 	}
 	else
