@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", c);
 	}
 	else
-		return(printf("Error\n"), 1);
+		return (printf("Error\n"), 1);
 
 	return (0);
 }
