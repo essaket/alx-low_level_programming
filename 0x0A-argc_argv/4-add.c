@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	unsigned int x, len;
 	char *y;
 
+	x = 0;
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
