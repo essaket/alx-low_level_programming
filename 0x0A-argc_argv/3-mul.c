@@ -5,7 +5,7 @@
  * main - program that multiplies two numbers
  *
  * @argc: input size of argument
- * @argc: input array of argumen
+ * @argv: input array of argument
  *
  * Return: 0 for success
  */
