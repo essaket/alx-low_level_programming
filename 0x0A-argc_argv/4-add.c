@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
 	while (--argc)
 	{
 		for (p = argv[argc]; *p; p++)
-		{
 			if (*p < 48 || *p > '9')
-				return (printf("Error\n"), 1);				
-			x += atoi(argv[argc]);
+				return (printf("Error\n"), 1);
+		
+		x += atoi(argv[argc]);
 	}
 	printf("%d\n", x);
 
