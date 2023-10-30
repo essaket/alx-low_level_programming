@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	int i = 0, x = 0, j = 0, z = 0;
 	char *pnt;
 
-	if (ac == 0 || av = NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (; i < ac; i++)
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (i = 0; av[i][j] != '\0'; j++, z++)
+		for (j = 0; av[i][j] != '\0'; j++, z++)
 			pnt[z] = av[i][j];
 		pnt[z] = '\n';
 		z++;
