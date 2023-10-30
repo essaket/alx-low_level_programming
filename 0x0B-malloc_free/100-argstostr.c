@@ -12,22 +12,21 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i = 0, x = 0, z = 0, y = 0;
+	int i, x, z = 0, y = 0;
 	char *pnt;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
-		for (; av[i][x]; x++)
+		for (x = 0; av[i][x]; x++)
 			y++;
 	}
 
 	y += ac;
 
-	pnt = malloc(sizeof(char) * y + 1);
-
+	pnt = malloc(sizeof(char) * y);
 	if (pnt == NULL)
 		return (NULL);
 
