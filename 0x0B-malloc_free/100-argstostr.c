@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (x = 0; av[i][x]; x++)
 		{
-			str[z] = av[i][x];
+			pnt[z] = av[i][x];
 			z++;
 		}
 
