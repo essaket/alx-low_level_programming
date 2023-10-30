@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 		if (i < size1)
 			pnt[i] = s1[i];
 		else
-			pnt[i] = s2[i];
+			pnt[i] = s2[i - size1];
 	}
 	pnt[i] = '\0';
 
