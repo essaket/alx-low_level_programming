@@ -37,14 +37,14 @@ char *str_concat(char *s1, char *s2)
 
 	while(s1[size1] != '\0')
 	{
-		pnt[i] = s1[size1];
-		i++;
+		pnt[size1] = s1[size1];
+		size1++;
 	}
 
 	while (s2[size2] != '\0')
 	{
 		pnt[i] = s2[size2];
-		i++;
+		i++, size2++;
 	}
 
 	pnt[i] = '\0';
