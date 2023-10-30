@@ -30,12 +30,12 @@ char *str_concat(char *s1, char *s2)
 	if (pnt == 0)
 		return (0);
 
-	for (; i <= size1 + size2; i++)
+	for (; i < size1 + size2; i++)
 	{
 		if (i < size1)
 			pnt[i] = s1[i];
 		else
-			pnt[i] = s2[i - size1];
+			pnt[i] = s2[i - size1 - 1];
 	}
 	pnt[i] = '\0';
 
