@@ -10,7 +10,7 @@
  * Return: number of words
  */
 
-int length_wors(char *s)
+int length_words(char *s)
 {
 int flag, c, w;
 flag = 0;
