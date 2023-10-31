@@ -42,7 +42,7 @@ int length_words(char *c)
  * Return: a pointer to an array of strings
  */
 
-har **strtow(char *str)
+char **strtow(char *str)
 {
 	char **pnt, *pt;
 	int i, k = 0, len = 0, w, c = 0, s, e;
