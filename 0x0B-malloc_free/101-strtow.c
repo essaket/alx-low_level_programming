@@ -39,43 +39,37 @@ int length_words(char *c)
 
 char **strtow(char *str)
 {
-	int i = 0, j, k, l, len = 0, wr = 0;
-	char **pnt;
-
-	if (str == NULL || *str == '\0')
-		return (NULL);
-	len = length_words(str);
-	if (len <= 1)
-		return (NULL);
-	pnt = (char **)malloc(len * sizeof(char *));
-	if (pnt == NULL)
-		return (NULL);
-	pnt[len - 1] = NULL;
-	while (str[i])
-	{
-		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
-		{
-			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
-				;
-			j++;
-			pnt[wr] = (char *)malloc(j * sizeof(char));
-			j--;
-			if (pnt[wr] == NULL)
-			{
-				for (k = 0; k < wr; k++)
-					free(pnt[k]);
-				free(pnt[len - 1]);
-				free(pnt);
-				return (NULL);
-			}
-			for (l = 0; l < j; l++)
-				pnt[wr][l] = str[i + l];
-			pnt[wr][l] = '\0';
-			wr++;
-			i += j;
-		}
-		else
-			j++;
-	}
-	return (pnt);
+char **matrix, *tmp;
+int i, k = 0, len = 0, words, c = 0, start, end;
+while (*(str + len))
+len++;
+words = length_words(str);
+if (words == 0)
+return (NULL);
+matrix = (char **) malloc(sizeof(char *) * (words + 1));
+if (matrix == NULL)
+return (NULL);
+for (i = 0; i <= len; i++)
+{
+if (str[i] == ' ' || str[i] == '\0')
+{
+if (c)
+{
+end = i;
+tmp = (char *) malloc(sizeof(char) * (c + 1));
+if (tmp == NULL)
+return (NULL);
+while (start < end)
+*tmp++ = str[start++];
+*tmp = '\0';
+matrix[k] = tmp - c;
+k++;
+c = 0;
+}
+}
+else if (c++ == 0)
+start = i;
+}
+matrix[k] = NULL;
+return (matrix);
 }
