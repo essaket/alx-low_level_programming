@@ -1,76 +1,114 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * check_convert - function that checked if number is positve or not
- *			and convert it from char to int
- *
- * @c: input string of function
- * Return: an int
+ * digit - function that check if number is digit or not
+ * @c: input of function
+ * Return: 1 if is digit and 0 if not
  */
 
-int check_convert(char *c)
+int digit(int c)
 {
-	int j = 1;
-	unsigned long int f, k, x = 0;
-
-	for (f = 0; !(c[f] >= '0' && c[f] <= '9'); f++)
-	{
-		if (c[f] == '-')
-			j *= -1;
-	}
-
-	for (k = f; c[k] >= '0' && c[k] <= '9'; k++)
-	{
-		x *= 10;
-		x += (c[k] - '0');
-	}
-
-	return (j * x);
+	return (c >= '0' && c <= '9');
 }
 
 /**
- * print_convert - function that prints an integer after convert it
- *				from int to char
- * @n: input of function
- * Return: 0 for success
+ * len - function that returns the length of a string
+ * @s: input string of function
+ * Return: lenght of a string
  */
 
-void print_convert(unsigned long int n)
+int len(char *s)
 {
-	unsigned long int i, x = 0, d;
+	int i = 0;
 
-	for (i = 0; n / d > 9; i++, d *= 10)
-		;
-
-	for (d = 1; d >= 1; n %= d, d /= 10)
-	{
-		x = n / d;
-		_putchar(x + '0');
-	}
+	while (*s++)
+		i++;
+	return (i);
 }
 
 /**
- * main - a program that multiplies two positive numbers
+ * mul - function that multiple two number string
+ * @s1: input first number of function
+ * @s2: input second number of function
+ * Return: multiple of two number
+ */
+
+char mul(char *s1, char *s2)
+{
+	char *r;
+	int l1, l2, a, b, c, x;
+
+	l1 = len(s1);
+	l2 = len(s2);
+	r = malloc(a = x = l1 + l2);
+	if (!r)
+		printf("Error\n"), exit(98);
+	while (a--)
+		r[a] = 0;
+
+	for (l1--; l1 >= 0; l1--)
+	{
+		if (!digit(s1[l1]))
+		{
+			free(r);
+			printf("Error\n"), exit(98);
+		}
+		a = s1[l1] - '0';
+		c = 0;
+
+		for (l2 = len(s2) - 1; l2 >= 0; l2--)
+		{
+			if (!digit(s2[l2]))
+			{
+				free(r);
+				printf("Error\n"), exit(98);
+			}
+			b = s2[l2] - '0';
+
+			c += r[l1 + l2 + 1] + (a * b);
+			r[l1 + l2 + 1] = c % 10;
+
+			c /= 10;
+		}
+		if (c)
+			r[l1 + l2 + 1] += c;
+	}
+	return (r);
+}
+
+
+/**
+ * main - program that multiple two number string
  * @argc: input argument of function
  * @argv: input array argument of function
  * Return: 0 for success
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
-	char er[] = "Error\n";
+	char *r;
+	int a, c, x;
 
 	if (argc != 3)
-	{
-		for (i = 0; er[i]; i++)
-			_putchar(er[i]);
-		exit(98);
-	}
-	print_convert(check_convert(argv[1]) * check_convert(argv[2]));
-	_putchar('\n');
+		printf("Error\n"), exit(98);
 
-	return (0);
+	x = len(argv[1]) + len(argv[2]);
+	r = mul(argv[1], argv[2]);
+	c = 0;
+	a = 0;
+	while (c < x)
+	{
+		if (r[c])
+			a = 1;
+		if (a)
+			_putchar(r[c] + '0');
+		c++;
+	}
+	if (!a)
+		_putchar('0');
+	_putchar('\n');
+	free(r);
 }
