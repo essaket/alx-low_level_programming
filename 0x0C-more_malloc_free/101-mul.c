@@ -36,7 +36,7 @@ int len(char *s)
  * Return: multiple of two number
  */
 
-char mul(char *s1, char *s2)
+char *mul(char *s1, char *s2)
 {
 	char *r;
 	int l1, l2, a, b, c, x;

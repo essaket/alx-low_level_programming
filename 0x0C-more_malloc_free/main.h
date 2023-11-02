@@ -11,6 +11,6 @@ int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int digit(int c);
 int len(char *s);
-char mul(char *s1, char *s2);
+char *mul(char *s1, char *s2);
 
 #endif
