@@ -27,7 +27,7 @@ int check_convert(char *c)
 		x += (c[k] - '0');
 	}
 
-	return (i * x);
+	return (j * x);
 }
 
 /**
