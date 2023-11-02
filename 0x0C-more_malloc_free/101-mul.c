@@ -13,7 +13,7 @@
 int check_convert(char *c)
 {
 	int j = 1;
-	unsigned int f, k, x = 0;
+	unsigned long int f, k, x = 0;
 
 	for (f = 0; !(c[f] >= '0' && c[f] <= '9'); f++)
 	{
@@ -37,9 +37,9 @@ int check_convert(char *c)
  * Return: 0 for success
  */
 
-void print_convert(unsigned int n)
+void print_convert(unsigned long int n)
 {
-	unsigned int i, x = 0, d;
+	unsigned long int i, x = 0, d;
 
 	for (i = 0; n / d > 9; i++, d *= 10)
 		;
@@ -60,6 +60,7 @@ void print_convert(unsigned int n)
 
 int main(int argc, char *argv[])
 {
+	(void)argc;
 	int i;
 	char er[] = "Error\n";
 
