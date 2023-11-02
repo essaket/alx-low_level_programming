@@ -53,17 +53,18 @@ char *big_multiply(char *s1, char *s2)
 		if (!_isdigit(s1[l1]))
 		{
 			free(r);
-			printf("Error\n"), exit(98);
+			printf("Error\n");
+			exit(98);
 		}
 		a = s1[l1] - '0';
 		c = 0;
-
 		for (l2 = _strlen(s2) - 1; l2 >= 0; l2--)
 		{
 			if (!_isdigit(s2[l2]))
 			{
 				free(r);
-				printf("Error\n"), exit(98);
+				printf("Error\n");
+				exit(98);
 			}
 			b = s2[l2] - '0';
 
@@ -92,8 +93,10 @@ int main(int argc, char **argv)
 	int a, c, x;
 
 	if (argc != 3)
-		printf("Error\n"), exit(98);
-
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	x = _strlen(argv[1]) + _strlen(argv[2]);
 	r = big_multiply(argv[1], argv[2]);
 	c = 0;
