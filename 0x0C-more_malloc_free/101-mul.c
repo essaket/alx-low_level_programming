@@ -60,7 +60,6 @@ void print_convert(unsigned long int n)
 
 int main(int argc, char *argv[])
 {
-	(void)argc;
 	int i;
 	char er[] = "Error\n";
 
