@@ -2,14 +2,13 @@
 #define STRUCT_DOG_H
 
 /**
- * struct_dog - a structure that containe tree element
+ * struct_dog - a struct of dog
  *
- * @name: input of function
- * @age: input of function
- * @owner: input of function
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  *
- * Return: 0 for success
- */
+ * Description: a structure that containe tree element of a dog */
 
 struct dog
 {
