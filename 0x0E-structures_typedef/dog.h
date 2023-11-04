@@ -1,14 +1,15 @@
-#ifndef DOD_H
-#define DOG_H
+#ifndef dog_H
+#define dog_H
 
 /**
- * struct_dog - a struct of dog
+ * struct dog - a structure of a dog
  *
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
  *
- * Description: a structure that containe tree element of a dog */
+ * Description: a structure that containe tree element of a dog
+ */
 
 struct dog
 {
