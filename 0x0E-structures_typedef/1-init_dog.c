@@ -5,7 +5,7 @@
  *
  * @d: input pointer o function
  * @name: input of function
- * @age. input of function
+ * @age: input of function
  * @owner: input of function
  *
  * Return: a void
