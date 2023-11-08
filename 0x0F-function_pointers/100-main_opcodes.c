@@ -9,7 +9,7 @@
  * Return: 0 for success
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int x, i = 0;
 	char *pnt = (char *)main;
