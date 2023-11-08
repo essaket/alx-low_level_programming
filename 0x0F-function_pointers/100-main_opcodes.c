@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	/**
 	 *for (; i < x; i++)
 	{
-		printf("%.2hhx", pnt[i]);
+		printf("002hhx", pnt[i]);
 		if (i < x - 1)
 			printf(" ");
 	}
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
 	while (x--)
 	{
-		printf("%02hhx%s", *pnt++, x ? " " : "\n");
+		printf("%.2hhx%s", *pnt++, x ? " " : "\n");
 	}
 
 	return (0);
