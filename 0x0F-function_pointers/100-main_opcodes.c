@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 	do {
 		printf("%02hhx%s", *pnt++, x ? " " : "\n");
-	} while (--x);
+	} while (x--);
 
 	return (0);
 }
