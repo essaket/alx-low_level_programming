@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int x;
+	int x, i = 0;
 	char *pnt = (char *)main;
 
 	if (argc != 2)
@@ -27,8 +27,13 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	while (x--)
-		printf("%02hhx%s", *pnt++, x ? " " : "\n");
-
+	for (; i < x; i++)
+	{
+		printf("%.2hhx", pnt[i]);
+		if (i < x - 1)
+			printf(" ");
+	}
+	printf("\n");
+		/**printf("%02hhx%s", *pnt++, x ? " " : "\n");*/
 	return (0);
 }
