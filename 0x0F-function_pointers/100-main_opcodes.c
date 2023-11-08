@@ -27,13 +27,15 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	/** for (; i < x; i++)
+	/**
+	 *for (; i < x; i++)
 	{
 		printf("%.2hhx", pnt[i]);
 		if (i < x - 1)
 			printf(" ");
 	}
-	printf("\n"); */
+	printf("\n");
+	*/
 
 	while (x--)
 	{
