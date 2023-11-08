@@ -35,9 +35,10 @@ int main(int argc, char *argv[])
 	}
 	printf("\n"); */
 
-	do {
+	while (x--)
+	{
 		printf("%02hhx%s", *pnt++, x ? " " : "\n");
-	} while (--x)
+	}
 
 	return (0);
 }
