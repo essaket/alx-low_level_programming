@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 		printf("Erroe\n");
 		exit(1);
 	}
+
 	x = atoi(argv[1]);
 	if (x < 0)
 	{
@@ -27,9 +28,7 @@ int main(int argc, char *argv[])
 	}
 
 	while (x--)
-	{
 		printf("%02hhx%s", *pnt++, x ? " " : "\n");
-	}
 
 	return (0);
 }
