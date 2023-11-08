@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 		printf("Erroe\n");
 		exit(1);
 	}
-
 	x = atoi(argv[1]);
 	if (x < 0)
 	{
