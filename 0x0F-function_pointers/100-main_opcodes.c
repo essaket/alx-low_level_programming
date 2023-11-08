@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int x, i;
+	int x;
 	char *pnt = (char *)main;
 
 	if (argc != 2)
