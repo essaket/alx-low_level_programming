@@ -5,7 +5,7 @@
  *			the operation asked by the user
  *
  * @s: input pointer of function
- * 
+ *
  * Return: the correct operation
  */
 
