@@ -51,7 +51,7 @@ void f_string(char *separator, va_list lt)
 	switch ((int)(!pnt))
 	case 1:
 		pnt = "(nil)";
-	
+
 	printf("%s%s", separator, pnt);
 }
 
