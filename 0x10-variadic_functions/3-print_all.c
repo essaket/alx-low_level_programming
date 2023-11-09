@@ -75,7 +75,7 @@ void print_all(const char * const format, ...)
 		{"i", f_int},
 		{"f", f_float},
 		{"s", f_string},
-		{NULL, NULL}
+		//{NULL, NULL}
 	};
 
 	va_start(lt, format);
