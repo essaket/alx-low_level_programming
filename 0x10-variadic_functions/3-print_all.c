@@ -67,7 +67,7 @@ void f_string(char *separator, va_list lt)
 
 void print_all(const char * const format, ...)
 {
-	int i, j;
+	int i = 0, j;
 	char *separator = "";
 	va_list lt;
 	types_l typesf[] = {
@@ -78,7 +78,6 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(lt, format);
-	i = 0;
 	while (format && format[i])
 	{
 		j = 0;
