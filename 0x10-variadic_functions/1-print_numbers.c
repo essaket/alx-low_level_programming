@@ -3,7 +3,7 @@
 /**
  * print_numbers - function that prints numbers
  *
- * @sperator: input pointer of function
+ * @separator: input pointer of function
  * @n: input number of parameters of function
  * @...: input numbers of function
  *
