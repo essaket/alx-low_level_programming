@@ -3,7 +3,7 @@
 /**
  * print_strings - function that prints strings
  *
- * @separator - input pointer of function
+ * @separator: input pointer of function
  * @n: input number of paramters of function
  * @...: input numbers of function
  *
@@ -21,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	while (i--)
 	{
 		pnt = va_arg(ps, char *);
-		printf("%s", str ? str : "(nil)";
+		printf("%s", pnt ? pnt : "(nil)");
 	}
 	printf("\n");
 	va_end(ps);
