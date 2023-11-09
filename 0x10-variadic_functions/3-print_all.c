@@ -48,10 +48,13 @@ void f_string(char *separator, va_list lt)
 	char *pnt;
 
 	pnt = va_arg(lt, char*);
-	switch ((int)(!pnt))
+/**
+ * switch ((int)(!pnt))
 	case 1:
 		pnt = "(nil)";
-
+*/
+	if (pnt == NULL)
+		pnt = "(nil)";
 	printf("%s%s", separator, pnt);
 }
 
