@@ -1,4 +1,4 @@
-#include "variadoc_functions.h"
+#include "variadic_functions.h"
 
 /**
  * f_char - formats character
@@ -33,7 +33,7 @@ void f_int(char *separator, va_list lt)
 
 void f_float(char *separator, va_list lt)
 {
-	printf("%s%f", separator, va_arg(lt, int));
+	printf("%s%f", separator, va_arg(lt, double));
 }
 
 /**
@@ -83,11 +83,11 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		while (typess[j].types)
+		while (typesf[j].types)
 		{
-			if (format[i] == typess[j].types[0])
+			if (format[i] == typesf[j].types[0])
 			{
-				typess[j].f(separator, lt);
+				typesf[j].t(separator, lt);
 				separator = ", ";
 			}
 			j++;
