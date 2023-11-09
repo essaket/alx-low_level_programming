@@ -9,7 +9,7 @@
 
 void f_char(char *separator, va_list lt)
 {
-	printf("%s%c", separator, va_arg(lt, int));
+	printf("%s%c", separator, va_arg(lt, char));
 }
 
 /**
