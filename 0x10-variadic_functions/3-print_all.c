@@ -47,14 +47,16 @@ void f_string(char *separator, va_list lt)
 {
 	char *pnt;
 
-	pnt = va_arg(lt, char*);
 /**
+ * pnt = va_arg(lt, char*);
+
  * switch ((int)(!pnt))
 	case 1:
 		pnt = "(nil)";
-*/
 	if (!pnt)
 		pnt = "(nil)";
+*/
+	pnt ? va_arg(lt, char*) : "(nil)";
 	printf("%s%s", separator, pnt);
 }
 
