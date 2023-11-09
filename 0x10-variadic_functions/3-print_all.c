@@ -53,7 +53,7 @@ void f_string(char *separator, va_list lt)
 	case 1:
 		pnt = "(nil)";
 */
-	if (pnt == NULL)
+	if (!pnt)
 		pnt = "(nil)";
 	printf("%s%s", separator, pnt);
 }
