@@ -9,7 +9,7 @@
 
 void f_char(char *separator, va_list lt)
 {
-	printf("%s%c", separator, va_arg(lt, char));
+	printf("%s%c", separator, va_arg(lt, int));
 }
 
 /**
@@ -48,11 +48,10 @@ void f_string(char *separator, va_list lt)
 	char *pnt;
 
 	pnt = va_arg(lt, char*);
-	if (pnt == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
+	switch ((int)(!pnt))
+	case 1:
+		pnt = "(nil)";
+	
 	printf("%s%s", separator, pnt);
 }
 
