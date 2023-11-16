@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void hicham(void) __attribute__ ((hicham));
+void hicham(void) __attribute__ ((constructor));
 
 /**
  * hicham - funtion that prints a string before the main function is executed
