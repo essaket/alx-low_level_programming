@@ -12,7 +12,7 @@ int length_string(char *str)
 {
 	int x = 0;
 
-	if (str[0] == NULL)
+	if (!str)
 		return (0);
 	while (!str[x])
 		x++;
@@ -42,7 +42,7 @@ size_t print_list(const list_t *h)
 		{
 			printf("[%d] %s\n", length_string(h->str), h->str);
 		}
-		num_nodes++;
+		nmb_nodes++;
 		h = h->next;
 	}
 
