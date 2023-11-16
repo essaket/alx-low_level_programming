@@ -8,4 +8,4 @@ main:
 	  mov 	eax, 0
 	  ref
 section		.data
-	  hicham db "Hello, Holberton", 0xa, 0
+	  hicham db "Hello, Holberton", 0xa, 0 /* hicham db "Hello, Holberton\n", 0 */
