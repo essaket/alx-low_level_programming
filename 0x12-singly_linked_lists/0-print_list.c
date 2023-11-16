@@ -14,7 +14,7 @@ int length_string(char *str)
 
 	if (!str)
 		return (0);
-	while (!str[x])
+	while (*str++)
 		x++;
 
 	return (x);
@@ -30,7 +30,7 @@ int length_string(char *str)
 
 size_t print_list(const list_t *h)
 {
-	size_t nmb_nodes = 0;
+	int nmb_nodes = 0;
 
 	while (h)
 	{
