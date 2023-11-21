@@ -42,7 +42,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t i, index = 0;
 	const listint_t **node = NULL;
 
-	while (!head)
+	while (head != NULL)
 	{
 		for (i = 0; i < index; i++)
 		{
@@ -58,6 +58,6 @@ size_t print_listint_safe(const listint_t *head)
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
-
+	free(node);
 	return (index);
 }
