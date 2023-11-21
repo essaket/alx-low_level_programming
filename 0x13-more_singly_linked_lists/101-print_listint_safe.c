@@ -5,12 +5,12 @@
  *
  * @node: the old list
  * @index: size of the new list
- * @node1: new node
+ * @x: new node
  *
  * Return: pointer to the new list
  */
 
-const listint_t **N(const listint_t **node, size_t index, const listint_t *node1)
+const listint_t **N(const listint_t **node, size_t index, const listint_t *x)
 {
 	const listint_t **new;
 	size_t i;
@@ -23,7 +23,7 @@ const listint_t **N(const listint_t **node, size_t index, const listint_t *node1
 	}
 	for (i = 0; i < index - 1; i++)
 		new[i] = node[i];
-	new[i] = node1;
+	new[i] = x;
 	free(node);
 
 	return (new);
