@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * _Node - function that reallocates memory for an array of pointers
+ * Node - function that reallocates memory for an array of pointers
  *
  * @node: the old list
  * @index: size of the new list
@@ -10,7 +10,7 @@
  * Return: pointer to the new list
  */
 
-const listint_t **_Node(const listint_t **node, size_t index, const listint_t *node1)
+const listint_t **Node(const listint_t **node, size_t index, const listint_t *node1)
 {
 	const listint_t **new;
 	size_t i;
@@ -53,7 +53,7 @@ size_t print_listint_safe(const listint_t *head)
 			}
 		}
 		index++;
-		node = _Node(node, index, head);
+		node = Node(node, index, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
