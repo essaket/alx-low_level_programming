@@ -6,7 +6,7 @@
  * @ac: argument of function
  * @av: argument o function
  *
- * Retunr: 1 or 0
+ * Return: no return
  */
 
 int main(int ac, char **av)
