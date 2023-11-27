@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - a program
+ * main - a program that copies the content of a file to another file
  *
  * @ac: argument of function
  * @av: argument o function
