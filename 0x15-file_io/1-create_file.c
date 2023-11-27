@@ -12,18 +12,29 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t nmb = 0, len;
+	int nletters;
+	int rwr;
 
 	if (!filename)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
 	if (fd == -1)
 		return (-1);
-	for (len = 0; text_content[len]; len++)
+
+	if (!text_content)
+		text_content = "";
+
+	for (nletters = 0; text_content[nletters]; nletters++)
 		;
-	if (len)
-		nmb = write(fd, text_content, len);
+
+	rwr = write(fd, text_content, nletters);
+
+	if (rwr == -1)
+		return (-1);
+
 	close(fd);
 
-	return (nmb == len ? 1 : .1);
+	return (1);
 }
