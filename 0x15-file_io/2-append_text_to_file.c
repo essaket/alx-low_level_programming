@@ -24,7 +24,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			;
 		nmb = write(fd, text_content, len);
 	}
-	clode(fd);
+	close(fd);
 
 	return (nmb == len ? 1 : -1);
 }
