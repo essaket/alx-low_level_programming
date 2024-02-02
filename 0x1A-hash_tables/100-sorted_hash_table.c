@@ -159,18 +159,17 @@ void shash_table_print(const shash_table_t *ht)
 	pht = ht->shead;
 	while (pht != NULL)
 	{
-			if (flag == 1)
-				printf(", ");
-			printf("'%s': '%s'", pht->key, pht->value);
-			flag = 1;
-			pht = pht->snext;
+		if (flag == 1)
+		printf(", ");
+		printf("'%s': '%s'", pht->key, pht->value);
+		flag = 1;
+		pht = pht->snext;
 	}
 	printf("}\n");
 }
 
 /**
- * shash_table_print_rev - print the hash tables key/value pairs
-		in reverse order using the sorted linked list
+ * shash_table_print_rev - print the hash tables key/value in reverse
  * @ht: the hash table
  *
  * Return: a void
