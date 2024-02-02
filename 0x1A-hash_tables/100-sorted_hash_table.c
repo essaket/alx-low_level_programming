@@ -135,7 +135,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 }
 
 /**
- * shash_table_print - function that print the hash table using the sorted linked list
+ * shash_table_print - function that print ht using the sorted linked list
  * @ht: hash table
  *
  * Return: a void
@@ -162,8 +162,8 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * shash_table_print_rev - print the hash tables key/value pairs 
-			in reverse order using the sorted linked list
+ * shash_table_print_rev - print the hash tables key/value pairs
+		in reverse order using the sorted linked list
  * @ht: the hash table
  *
  * Return: a void
@@ -172,21 +172,21 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	char flag = 0; /* 0 if no data has been printed yet*/
-        shash_node_t *pht;
+	shash_node_t *pht;
 
-        if (ht == NULL || ht->array == NULL)
-                return;
-        printf("{");
-        pht = ht->stail;
-        while (pht != NULL)
+	if (ht == NULL || ht->array == NULL)
+		return;
+	printf("{");
+	pht = ht->stail;
+	while (pht != NULL)
 	{
-                        if (flag == 1)
-                                printf(", ");
-                        printf("'%s': '%s'", pht->key, pht->value);
-                        flag = 1;
-                        pht = pht->sprev;
-        }
-        printf("}\n");
+		if (flag == 1)
+			printf(", ");
+		printf("'%s': '%s'", pht->key, pht->value);
+		flag = 1;
+		pht = pht->sprev;
+	}
+	printf("}\n");
 }
 
 /**
