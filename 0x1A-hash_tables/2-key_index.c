@@ -5,7 +5,7 @@
  * @key: key to get index for
  * @size: size of the hash table
  *
- * Return: index for the key
+ * Return: index for the ky
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
